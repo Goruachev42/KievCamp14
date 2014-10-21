@@ -1,10 +1,11 @@
 <?php
 $options['application'] = 'goruachev42';
-$options['deploy-repository'] = 'https://github.com/Goruachev42/KievCamp14';
+$options['deploy-repository'] = 'git@github.com:Goruachev42/KievCamp14.git';
 $options['branch'] = "master";
 $options['keep-releases'] = 3;
 $options['deploy-via'] = 'RemoteCache';
 $options['docroot'] = '/var/www/vhosts/drushdep.uat.link/httpdocs/';
+
 //$options['ssh-options'] = '-o PasswordAuthentication=yes';
 //$options['git_enable_submodules'] = TRUE;
 // Run additional tasks after the 'current' symlink has been updated
