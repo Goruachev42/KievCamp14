@@ -1,6 +1,6 @@
 <?php
 $options['application'] = 'goruachev42';
-$options['deploy-repository'] = 'git@github.com:Goruachev42/KievCamp14.git';
+$options['deploy-repository'] = 'https://github.com/Goruachev42/KievCamp14.git';
 $options['branch'] = "master";
 $options['keep-releases'] = 3;
 $options['deploy-via'] = 'RemoteCache';
