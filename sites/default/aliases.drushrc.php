@@ -5,7 +5,7 @@ $aliases['live'] = array(
     'uri' => 'http://drushdep.uat.link',
     'remote-user' => 'drushdep',
     'remote-host' => 'drushdep.uat.link',
-//   'ssh-options' => '-o PasswordAuthentication=yes',
+  'ssh-options' => '-o PasswordAuthentication=yes',
 
 
 
