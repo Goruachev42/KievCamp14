@@ -6,6 +6,8 @@ $options['keep-releases'] = 3;
 $options['deploy-via'] = 'RemoteCache';
 $options['docroot'] = '/var/www/vhosts/drushdep.uat.link/httpdocs/';
 
+
+$options['shell-aliases']['pull'] = '!git pull origin master';
 //$options['ssh-options'] = '-o PasswordAuthentication=yes';
 //$options['git_enable_submodules'] = TRUE;
 // Run additional tasks after the 'current' symlink has been updated
