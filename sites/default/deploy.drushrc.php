@@ -9,6 +9,8 @@ $options['ssh-options'] = '-o PasswordAuthentication=yes';
 $options['git_enable_submodules'] = TRUE;
 // Run additional tasks after the 'current' symlink has been updated
 $options['after']['deploy-symlink'][] = 'my_custom_task';
+
+
 //
 ///**
 // * The task needs to be defined with a @task "decorator" in the comment block preceding it
