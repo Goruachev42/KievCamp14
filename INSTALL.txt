@@ -8,7 +8,7 @@ CONTENTS OF THIS FILE
  * Building and customizing your site
  * Multisite configuration
  * More information
- *   somelltest 22
+ *   somelltest 223
 REQUIREMENTS AND NOTES
 ----------------------
 

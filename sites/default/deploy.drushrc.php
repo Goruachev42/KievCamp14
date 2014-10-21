@@ -14,7 +14,7 @@ $options['docroot'] = '/var/www/vhosts/drushdep.uat.link/httpdocs/';
 //
 ///**
 // * The task needs to be defined with a @task "decorator" in the comment block preceding it
-// * @task
+// * @taskss
 // */
 //function my_custom_task($d) {
 //    $d->run("ln -s /var/www/vhosts/drushdep.uat.link/deploy/shared/settings.php %s/sites/default/settings.php", $d->latest_release());
