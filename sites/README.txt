@@ -12,6 +12,8 @@ structure are available to all sites. Alternatively, the sites/your_site_name/
 subdirectory pattern may be used to restrict extensions to a specific
 site instance.
 
+
+
 See the respective README.txt files in sites/all/themes and sites/all/modules
 for additional information about obtaining and organizing extensions.
 
