@@ -215,9 +215,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'kievcamp14',
-      'username' => 'root',
-      'password' => 'root',
+      'database' => 'admin_drushdep',
+      'username' => 'drushdep',
+      'password' => 'utf8004242',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
