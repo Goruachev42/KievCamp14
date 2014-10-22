@@ -4,23 +4,23 @@ $options['deploy-repository'] = 'https://github.com/Goruachev42/KievCamp14.git';
 $options['branch'] = "master";
 $options['keep-releases'] = 3;
 $options['deploy-via'] = 'RemoteCache';
-$options['webroot'] = '/var/www/vhosts/drushdep.uat.link/httpdocs/';
+$options['docroot'] = '/var/www/vhosts/drushdep.uat.link/httpdocs/';
 
 
-$options['shell-aliases']['pull'] = '!git pull origin master';
-$options['ssh-options'] = '-o PasswordAuthentication=yes';
-//$options['git_enable_submodules'] = TRUE;
+// Initialize, sync, and update submodules with 'git submodule' commands
+$options['git_enable_submodules'] = TRUE;
 // Run additional tasks after the 'current' symlink has been updated
-//$options['after']['deploy-symlink'][] = 'my_custom_task';
-//
-//  22
-//
-///**
-// * The task needs to be defined with a @task "decorator" in the comment block preceding it
-// * @taskss
-// */
-//function my_custom_task($d) {
-//    $d->run("ln -s /var/www/vhosts/drushdep.uat.link/deploy/shared/settings.php %s/sites/default/settings.php", $d->latest_release());
-//    $d->run("ln -s /var/www/vhosts/drushdep.uat.link/deploy/shared/files %s/sites/default/files", $d->latest_release());
-//}
 
+$options['after']['deploy-symlink'][] = 'deploy_cache_task';
+$options['after']['deploy-symlink'][] = 'deploy_cache_task2';
+
+/**
+ * The task needs to be defined with a @task "decorator" in the comment block preceding it
+ * @task
+ */
+function deploy_cache_task($d) {
+    $d->run_once("cd ~/var/www/vhosts/drushdep.uat.link/httpdocs/ && %s cc all -y", $d->sites[0]['path-aliases']['%drush-script']);
+}
+function deploy_cache_task2($d) {
+    $d->run_once("cd ~/var/www/vhosts/drushdep.uat.link/httpdocs/ && %s en module_filter -y", $d->sites[0]['path-aliases']['%drush-script']);
+}

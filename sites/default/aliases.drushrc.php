@@ -6,7 +6,10 @@ $aliases['live'] = array(
     'remote-user' => 'drushdep',
     'remote-host' => 'drushdep.uat.link',
   'ssh-options' => '-o PasswordAuthentication=yes',
-
+    'path-aliases' => array(
+        '%files' => '/var/www/vhosts/drushdep.uat.link/httpdocs/sites/default/files',
+        '%drush-script' => 'drush',
+    ),
 
 
 );
