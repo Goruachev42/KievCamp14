@@ -2,7 +2,7 @@
 $options['application'] = 'drupal';
 $options['deploy-repository'] = 'https://github.com/Goruachev42/KievCamp14.git';
 $options['branch'] = "master";
-$options['keep-releases'] = 2;
+$options['keep-releases'] = 3;
 $options['deploy-via'] = 'RemoteCache';
 
 
